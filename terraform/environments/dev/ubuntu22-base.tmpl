@@ -1,0 +1,26 @@
+NAME = "ubuntu22-base"
+CPU = "1"
+VCPU = "1"
+MEMORY = "2048"
+
+DISK = [
+  IMAGE = "ubuntu2204-cloud"
+]
+
+NIC = [
+  NETWORK = "public-net"
+]
+
+CONTEXT = [
+  NETWORK = "YES",
+  SSH_PUBLIC_KEY = "$USER[SSH_PUBLIC_KEY]"
+]
+
+GRAPHICS = [
+  TYPE = "VNC",
+  LISTEN = "0.0.0.0"
+]
+
+OS = [
+  BOOT = "disk0"
+]
